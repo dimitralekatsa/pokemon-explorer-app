@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:http/http.dart' as http;
 
-import '../../core/constants/api_constants.dart';
-import '../../core/error/app_exception.dart';
+import '../../config/api_constants.dart';
+import '../../utils/app_exception.dart';
 
 class PokeApiService {
   final http.Client _client;
