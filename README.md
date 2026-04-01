@@ -18,18 +18,18 @@ The project follows the [Flutter recommended app architecture](https://docs.flut
 
 ```
 lib/
-├── config/          # App-wide constants (API URLs, Pokemon types)
+├── config/                 # App-wide constants (API URLs, Pokemon types)
 ├── data/
-│   ├── services/    # Stateless HTTP wrappers — talk to PokéAPI, return raw JSON
-│   └── repositories/# Transform raw data into domain models, handle caching
+│   ├── services/           # Stateless HTTP wrappers — talk to PokéAPI, return raw JSON
+│   └── repositories/       # Transform raw data into domain models, handle caching
 ├── domain/
-│   └── models/      # Pure Dart data classes (PokemonSummary, PokemonDetail)
+│   └── models/             # Pure Dart data classes (PokemonSummary, PokemonDetail)
 ├── ui/
-│   ├── core/        # Shared widgets and app theme
+│   ├── core/               # Shared widgets and app theme
 │   └── <feature>/
-│       ├── view_models/  # ChangeNotifier ViewModels — one per screen
-│       └── widgets/      # Screens and feature-specific widgets
-└── utils/           # Command, Result, AppException utilities
+│       ├── view_models/    # ChangeNotifier ViewModels — one per screen
+│       └── widgets/        # Screens and feature-specific widgets
+└── utils/                  # Command, Result, AppException utilities
 ```
 
 ### Key patterns
