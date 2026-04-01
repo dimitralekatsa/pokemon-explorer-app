@@ -25,7 +25,7 @@ class PokemonRepository {
           id: id,
           name: pokemon['name'] as String,
           url: url,
-          svgUrl: '${ApiConstants.dreamWorldSvgUrl}/$id.svg',
+          imageUrl: '${ApiConstants.officialArtworkUrl}/$id.png',
         );
       }).toList();
 
@@ -48,8 +48,8 @@ class PokemonRepository {
       return Ok(PokemonDetail(
         id: json['id'] as int,
         name: json['name'] as String,
-        svgUrl: '${ApiConstants.dreamWorldSvgUrl}/${json['id']}.svg',
-        gifUrl: '${ApiConstants.showdownGifUrl}/${json['id']}.gif',
+        imageUrl: '${ApiConstants.officialArtworkUrl}/${json['id']}.png',
+        svgUrl: '${ApiConstants.dreamWorldUrl}/${json['id']}.svg',
         hp: statValue('hp'),
         attack: statValue('attack'),
         defense: statValue('defense'),
